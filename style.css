@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 375px;
+    margin: auto;
+    border: 1px solid grey;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+
+.profile-details {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 11px;
+    
+}
+
+.poster-image {
+    border-radius: 50px;
+    margin-right: 7px;
+}
+
+.poster-name {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.poster-location {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.mainInteraction {
+    padding: 15px 10px;
+}
+
+
+.interaction--box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.interaction-icons {
+    height: 22px;
+    width: 22px;
+}
+
+.likes-p {
+    margin-bottom: 12px;
+}
+
+.likes-p, .comment-p > span {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.comment-p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+}
