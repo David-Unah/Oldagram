@@ -6,7 +6,7 @@ const posts = [
         avatar: "public/images/vincent-van-gogh.png",
         post: "public/images/post-image.png",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 0
     },
     {
         name: "Gustave Courbet",
@@ -15,16 +15,16 @@ const posts = [
         avatar: "public/images/gustavecourbet.png",
         post: "public/images/secondpost.png",
         comment: "i'm feelin a bit stressed tbh",
-        likes: 4
+        likes: 0
     },
-        {
+        {  
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
         avatar: "public/images/joseph-ducreux.png",
         post: "public/images/thirdpost.png",
         comment: "gm friends! which coin are YOU stacking up today?? post below and WAGMI!",
-        likes: 152
+        likes: 0
     }
 ]
 
@@ -43,17 +43,25 @@ for (let i = 0; i < posts.length; i++) {
                 <img src=${posts[i].post} alt="post-image" class="mainPostImages">
                 <div class="mainInteraction">
                     <div class="interaction--box">
-                        <img src="public/images/heart.png" alt="love icon" class="interaction-icons">
+                        <img src="public/images/heart.png" alt="love icon" class="interaction-icons like-icon" data-post-index=${i}>
                         <img src="public/images/chat (1).png" alt="comment icon" class="interaction-icons">
                         <img src="public/images/send.png" alt="send icon" class="interaction-icons">
                     </div>
-                    <p class="likes-p" onclick= incrementLikes()>${posts[i].likes} likes</p>
+                    <p class="likes-p" id="like-${i}">${posts[i].likes} likes</p>
                     <p class="comment-p"><span>${posts[i].username}</span> ${posts[i].comment}</p>
                 </div>
             </div>
     `
 }
 
-function incrementLikes() {
-    console.log('like was incremented')
+mainPostBody.addEventListener('click', function(event) {
+    if (event.target.classList.contains('like-icon')) {
+        const postIndex = event.target.dataset.postIndex
+        incrementLikes(postIndex)
+    }
+})
+
+function incrementLikes(postNumber) {
+    let likeIncrease = posts[postNumber].likes++
+    document.getElementById(`like-${postNumber}`).textContent = `${likeIncrease} likes`
 }
