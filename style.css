@@ -8,7 +8,7 @@
 body {
     max-width: 375px;
     margin: auto;
-    border: 1px solid grey;
+
     background-color: whitesmoke;
 }
 
@@ -19,11 +19,12 @@ nav {
     align-items: center;
     padding: 15px;
     border-bottom: 1px solid #C6C6C6;
+    background-color: white;
 }
 
 .each--posts {
-    margin-top: 3px;
-    border: 1px solid red;
+    margin-bottom: 10px;
+    background-color: white;
 }
 
 
