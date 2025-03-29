@@ -40,7 +40,7 @@ for (let i = 0; i < posts.length; i++) {
                         <p class="poster-location">${posts[i].location}</p>
                     </div>
                 </div>
-                <img src=${posts[i].post} alt="post-image">
+                <img src=${posts[i].post} alt="post-image" class="mainPostImages>
                 <div class="mainInteraction">
                     <div class="interaction--box">
                         <img src="public/images/heart.png" alt="love icon" class="interaction-icons">
