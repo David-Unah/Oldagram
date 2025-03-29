@@ -8,7 +8,6 @@
 body {
     max-width: 375px;
     margin: auto;
-
     background-color: whitesmoke;
 }
 
@@ -26,6 +25,8 @@ nav {
     margin-bottom: 10px;
     background-color: white;
 }
+
+
 
 .mainPostImages {
     width: 100%;
@@ -56,7 +57,7 @@ nav {
     font-weight: 400;
 }
 
-.mainInteraction {
+.mainInteraction {  
     padding: 15px 10px;
 }
 
