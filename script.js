@@ -47,9 +47,13 @@ for (let i = 0; i < posts.length; i++) {
                         <img src="public/images/chat (1).png" alt="comment icon" class="interaction-icons">
                         <img src="public/images/send.png" alt="send icon" class="interaction-icons">
                     </div>
-                    <p class="likes-p">${posts[i].likes} likes</p>
+                    <p class="likes-p" onclick= incrementLikes()>${posts[i].likes} likes</p>
                     <p class="comment-p"><span>${posts[i].username}</span> ${posts[i].comment}</p>
                 </div>
             </div>
     `
+}
+
+function incrementLikes() {
+    console.log('like was incremented')
 }
