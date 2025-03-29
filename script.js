@@ -40,10 +40,10 @@ for (let i = 0; i < posts.length; i++) {
                         <p class="poster-location">${posts[i].location}</p>
                     </div>
                 </div>
-                <img src=${posts[i].post} alt="post-image" class="mainPostImages">
+                <img src=${posts[i].post} alt="post-image" class="mainPostImages" data-post-index=${i}>
                 <div class="mainInteraction">
                     <div class="interaction--box">
-                        <img src="public/images/heart.png" alt="love icon" class="interaction-icons like-icon" data-post-index=${i}>
+                        <img src="public/images/heart.png" alt="love icon" class="interaction-icons" data-post-index=${i}>
                         <img src="public/images/chat (1).png" alt="comment icon" class="interaction-icons">
                         <img src="public/images/send.png" alt="send icon" class="interaction-icons">
                     </div>
@@ -55,10 +55,9 @@ for (let i = 0; i < posts.length; i++) {
 }
 
 mainPostBody.addEventListener('click', function(event) {
-    if (event.target.classList.contains('like-icon')) {
-        const postIndex = event.target.dataset.postIndex
-        incrementLikes(postIndex)
-    }
+    const postIndex = event.target.dataset.postIndex
+    incrementLikes(postIndex)
+
 })
 
 function incrementLikes(postNumber) {
